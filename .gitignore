@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Testes, lint e cobertura
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Certificado digital A1 (e-CNPJ): nunca no Git
+*.pfx
+*.p12
+
+# Dados locais: nunca commitar dado real
+data/local/
+*.sqlite3
+
+# Azurite (emulador do Azure Storage)
+__azurite_db_*__.json
+__blobstorage__/
+__queuestorage__/
+.azurite/
+
+# Editores e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
