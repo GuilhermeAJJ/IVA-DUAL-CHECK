@@ -1,0 +1,51 @@
+name: Defeito
+description: Algo não funciona como a documentação diz.
+labels: ["tipo: fix"]
+assignees: ["GuilhermeAJJ"]
+projects: ["GuilhermeAJJ/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Nunca cole dado real:** nota fiscal de verdade, CNPJ ou CPF reais, certificado digital, chave de API ou senha. Use os XMLs fictícios do projeto ou mascare os dados.
+
+        Falha de segurança não vai aqui: veja a [política de segurança](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/security/policy).
+  - type: textarea
+    id: o-que-aconteceu
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: o-que-era-esperado
+    attributes:
+      label: O que era esperado
+    validations:
+      required: true
+  - type: textarea
+    id: como-reproduzir
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão ou commit
+      placeholder: v0.1.0 ou 1a2b3c4
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Só o trecho relevante, com o `correlation_id` quando houver.
+      render: text
+  - type: checkboxes
+    id: dados
+    attributes:
+      label: Dados
+      options:
+        - label: Não incluí dado real, segredo nem certificado nesta issue.
+          required: true
