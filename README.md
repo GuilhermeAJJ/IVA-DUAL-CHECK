@@ -10,7 +10,7 @@
 
 Muito projeto com IA pluga um modelo num sistema pronto e para por aí. Este faz o caminho contrário: parte do problema e decide, etapa por etapa, o que é regra (código), o que pede julgamento (IA) e o que é decisão (humano).
 
-Cada escolha vira um ADR em `docs/adr` (a partir da v0.1.0), e a avaliação mostra com números quanto cada parte resolve.
+Cada escolha vira um ADR em [`docs/adr`](docs/adr/README.md), e a avaliação mostra com números quanto cada parte resolve.
 
 ## O problema
 
