@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Relatar uma vulnerabilidade
+    url: https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/security/advisories/new
+    about: Falha de segurança não vai em issue pública. Use o relato privado.
