@@ -1,0 +1,14 @@
+[project]
+name = "iva-dual-check"
+version = "0.1.0.dev0"
+description = "Conferência fiscal de notas de compra na reforma tributária (CBS e IBS), com IA só onde o código não resolve."
+readme = "README.md"
+authors = [
+    { name = "Guilherme Justino" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
