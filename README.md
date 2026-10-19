@@ -88,6 +88,28 @@ Depois da v1.0.0: conciliação das notas com o extrato bancário.
 - MCP (Model Context Protocol)
 - Docker Compose, GitHub Actions, uv, Ruff e pytest
 
+## Como rodar
+
+Só precisa do [uv](https://docs.astral.sh/uv/getting-started/installation/). Na primeira execução, ele baixa o Python 3.12, se faltar, e instala as dependências.
+
+```sh
+uv run uvicorn iva_dual_check.main:app --reload
+```
+
+A API sobe em `http://127.0.0.1:8000`, e o `--reload` a reinicia a cada mudança no código. O `GET /health` responde `{"status": "ok"}`, e a documentação interativa fica em `/docs`.
+
+Testes e lint:
+
+```sh
+uv run pytest
+uv run ruff check
+uv run ruff format --check
+```
+
+- Um comando só: o uv run cria a .venv, instala as versões do uv.lock e baixa o Python se faltar. Por isso não é preciso rodar uv sync antes.
+- Blocos sh: são comandos que funcionam igual em qualquer terminal.
+- Testes e lint: são os mesmos comandos dos critérios de aceite, e vão ser os mesmos da CI na #8.
+
 ## Como trabalhamos
 
 Kanban no [GitHub Projects](https://github.com/users/GuilhermeAJJ/projects/1): uma tarefa é uma issue, uma branch e um pull request. Os commits seguem o [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/), e as versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/). O passo a passo está no [guia de contribuição](CONTRIBUTING.md). Falha de segurança se relata em privado, como explica a [política de segurança](SECURITY.md).
