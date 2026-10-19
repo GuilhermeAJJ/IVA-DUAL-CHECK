@@ -9,7 +9,6 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 ### Adicionado
 
 - Esqueleto Python 3.12 gerenciado com uv: API FastAPI com o `GET /health`, teste com pytest, lint e formatação com o Ruff e a seção "Como rodar" no README.
-
 - Registro das decisões de arquitetura em `docs/adr`, com o template, o índice e o ADR-0001.
 - README com a tese, o problema, a arquitetura e o roteiro até a v1.0.0.
 - Licença MIT.
