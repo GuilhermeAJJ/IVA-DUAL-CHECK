@@ -109,6 +109,23 @@ uv run ruff format --check
 
 O [CI](.github/workflows/ci.yml) roda esses três comandos em todo PR e em todo push na `main`, junto com a varredura de segredos do histórico inteiro.
 
+## Ambiente local com Docker
+
+Sobe a API, o PostgreSQL 18 com pgvector e o Azurite, que emula o Azure Blob Storage, sem conta no Azure. Precisa do Docker com o Compose v2.
+
+```sh
+cp .env.example .env
+docker compose up --build --wait
+```
+
+O `--wait` só devolve o terminal quando os três serviços estão saudáveis. Depois disso:
+
+- a API responde em `http://127.0.0.1:8000/health`;
+- o PostgreSQL fica em `127.0.0.1:5432`, com o usuário, a senha e o banco do `.env`;
+- o Blob Storage do Azurite fica em `http://127.0.0.1:10000`.
+
+As portas só abrem em `127.0.0.1`, então nenhum serviço fica acessível de outra máquina da rede. Para parar, `docker compose down`; para apagar também os dados, `docker compose down --volumes`.
+
 ## Como trabalhamos
 
 Kanban no [GitHub Projects](https://github.com/users/GuilhermeAJJ/projects/1): uma tarefa é uma issue, uma branch e um pull request. Os commits seguem o [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/), e as versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/). O passo a passo está no [guia de contribuição](CONTRIBUTING.md). Falha de segurança se relata em privado, como explica a [política de segurança](SECURITY.md).
