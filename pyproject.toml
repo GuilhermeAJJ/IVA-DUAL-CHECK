@@ -1,6 +1,6 @@
 [project]
 name = "iva-dual-check"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Conferência fiscal de notas de compra na reforma tributária (CBS e IBS), com IA só onde o código não resolve."
 readme = "README.md"
 authors = [

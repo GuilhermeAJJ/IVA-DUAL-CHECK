@@ -4,8 +4,6 @@
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 [![CI](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1.0--dev-blue)
-![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
 
 ## A tese
 
@@ -66,7 +64,7 @@ flowchart LR
 
 | Versão | Entrega | Status |
 |---|---|---|
-| v0.1.0 | Fundação: repositório, fluxo de trabalho, CI e esqueleto | Em andamento |
+| v0.1.0 | Fundação: repositório, fluxo de trabalho, CI e esqueleto | Lançada |
 | v0.2.0 | Ler e guardar a nota (XML) | Planejada |
 | v0.3.0 | Calcular e achar divergências | Planejada |
 | v0.4.0 | Conferência humana | Planejada |

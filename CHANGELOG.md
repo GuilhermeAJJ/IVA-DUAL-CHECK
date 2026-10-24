@@ -6,6 +6,8 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 
 ## [Não lançado]
 
+## [0.1.0] - 2026-10-23
+
 ### Adicionado
 
 - Ambiente local com `docker compose up`: a API numa imagem multi-stage com uv, rodando sem root e com o disco só de leitura; o PostgreSQL 18 com pgvector; e o Azurite como emulador do Blob Storage, sem telemetria. Portas só em `127.0.0.1`, healthchecks, volumes nomeados e o `.env.example`. O CI sobe o ambiente em todo PR e confere o `/health`.
@@ -17,3 +19,6 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 - `.gitignore` para Python, com segredos, certificados digitais e dados locais fora do Git.
 - `.gitattributes` com fim de linha LF.
 - Modelos de issue (tarefa e defeito) e de PR, guia de contribuição e política de segurança, com o relato privado de vulnerabilidades ativado.
+
+[Não lançado]: https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/releases/tag/v0.1.0
