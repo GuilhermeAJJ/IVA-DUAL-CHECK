@@ -66,3 +66,27 @@ jobs:
       - name: Varre o histórico inteiro
         run: |
           "$RUNNER_TEMP/gitleaks" git --redact --verbose --no-banner .
+
+  ambiente-local:
+    name: Ambiente local (compose)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Sobe os três serviços e espera ficarem saudáveis
+        run: |
+          cp .env.example .env
+          docker compose up --build --wait --wait-timeout 180
+
+      - name: Confere o /health pela porta publicada
+        run: curl --fail --silent --show-error http://127.0.0.1:8000/health
+
+      - name: Confere que a API não roda como root
+        run: test "$(docker compose exec -T api id -u)" != "0"
+
+      - name: Mostra os logs, se algo falhou
+        if: failure()
+        run: docker compose logs
