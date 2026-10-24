@@ -1,0 +1,8 @@
+# Lista do que entra no build, não do que sai: tudo fica de fora, menos o que a imagem precisa.
+# Assim um arquivo novo, como o .env, nunca entra na imagem por esquecimento.
+*
+!pyproject.toml
+!uv.lock
+!README.md
+!src/
+**/__pycache__
