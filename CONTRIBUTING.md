@@ -77,6 +77,7 @@ Documentação, issues, PRs e commits ficam em português. O código fica em ing
 
 - Só dados fictícios. Nenhuma nota fiscal real, CNPJ, CPF ou certificado digital entra no repositório nem nas issues.
 - Segredos ficam no `.env`, que nunca é commitado. O `.env.example` lista as variáveis com valores falsos.
+- O CI varre o histórico inteiro com o gitleaks em todo PR. Um achado deixa o PR vermelho, e o segredo vazado precisa ser revogado, não só apagado: o histórico do Git guarda o valor antigo.
 - Vulnerabilidade se relata em privado, como explica a [política de segurança](SECURITY.md).
 
 ## Versões

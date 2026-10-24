@@ -3,6 +3,7 @@
 > Conferência fiscal de notas de compra na reforma tributária (CBS e IBS), com IA só onde o código não resolve.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+[![CI](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml)
 ![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1.0--dev-blue)
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
 
@@ -105,6 +106,8 @@ uv run pytest
 uv run ruff check
 uv run ruff format --check
 ```
+
+O [CI](.github/workflows/ci.yml) roda esses três comandos em todo PR e em todo push na `main`, junto com a varredura de segredos do histórico inteiro.
 
 ## Como trabalhamos
 

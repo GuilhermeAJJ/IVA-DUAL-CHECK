@@ -8,6 +8,7 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 
 ### Adicionado
 
+- CI no GitHub Actions em todo PR e em todo push na `main`: Ruff, pytest e a varredura de segredos do histórico inteiro com o gitleaks, com o token só de leitura e as actions fixadas por SHA. Dependabot para as actions e as dependências Python, com a mesma quarentena de 7 dias do uv.
 - Esqueleto Python 3.12 gerenciado com uv: API FastAPI com o `GET /health`, teste com pytest, lint e formatação com o Ruff e a seção "Como rodar" no README.
 - Registro das decisões de arquitetura em `docs/adr`, com o template, o índice e o ADR-0001.
 - README com a tese, o problema, a arquitetura e o roteiro até a v1.0.0.
