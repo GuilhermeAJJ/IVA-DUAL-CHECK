@@ -4,8 +4,6 @@
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 [![CI](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1.0-blue)
-![Licença](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
 
 ## A tese
 
