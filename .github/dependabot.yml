@@ -28,3 +28,34 @@ updates:
     commit-message:
       prefix: build
     labels: ["tipo: build"]
+
+  # Imagens do Dockerfile (Python e uv) e do compose.yaml (pgvector e Azurite), fixadas por digest.
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    ignore:
+      # A versão do Python é decisão do projeto (requires-python e .python-version), não do Dependabot.
+      - dependency-name: python
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+    groups:
+      dockerfile:
+        patterns: ["*"]
+    commit-message:
+      prefix: build
+    labels: ["tipo: build"]
+
+  - package-ecosystem: docker-compose
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      compose:
+        patterns: ["*"]
+    commit-message:
+      prefix: build
+    labels: ["tipo: build"]
