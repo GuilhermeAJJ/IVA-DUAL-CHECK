@@ -1,7 +1,7 @@
 [project]
 name = "iva-dual-check"
 version = "0.1.0"
-description = "Conferência fiscal de notas de compra na reforma tributária (CBS e IBS), com IA só onde o código não resolve."
+description = "Confere todos os tributos das notas fiscais de compra (NF-e), do ICMS e do IPI à CBS e ao IBS. O código acha as divergências, um agente de IA investiga cada uma em segundo plano, e o analista decide."
 readme = "README.md"
 authors = [
     { name = "Guilherme Justino" }

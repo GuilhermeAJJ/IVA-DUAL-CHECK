@@ -6,6 +6,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 
 ## [Não lançado]
 
+### Modificado
+
+- README e `description` do `pyproject.toml` com o escopo ampliado: todos os tributos da NF-e de compra, em três níveis de profundidade, e um agente de IA que investiga as divergências em segundo plano. O roteiro da v0.2.0 à v0.8.0 foi refeito.
+
 ## [0.1.0] - 2026-10-24
 
 ### Adicionado
