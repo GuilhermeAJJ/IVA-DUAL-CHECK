@@ -4,6 +4,8 @@
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 [![CI](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/actions/workflows/ci.yml)
+[![Versão](https://img.shields.io/github/v/release/GuilhermeAJJ/IVA-DUAL-CHECK?label=vers%C3%A3o)](https://github.com/GuilhermeAJJ/IVA-DUAL-CHECK/releases/latest)
+[![Licença](https://img.shields.io/github/license/GuilhermeAJJ/IVA-DUAL-CHECK?label=licen%C3%A7a&color=green)](LICENSE)
 
 ## A tese
 
