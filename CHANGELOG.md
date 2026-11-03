@@ -8,7 +8,7 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), e
 
 ### Modificado
 
-- README e `description` do `pyproject.toml` com o escopo ampliado: todos os tributos da NF-e de compra, em três níveis de profundidade, e um agente de IA que investiga as divergências em segundo plano. O roteiro da v0.2.0 à v0.8.0 foi refeito.
+- README e `description` do `pyproject.toml` com o escopo novo: um motor fiscal das notas de mercadoria nas 27 UFs, com as regras em três camadas, que calcula os tributos da nota de venda e confere os da nota de compra, e um agente de IA que investiga as divergências em segundo plano. O roteiro foi refeito até a v0.9.0.
 
 ## [0.1.0] - 2026-10-24
 
