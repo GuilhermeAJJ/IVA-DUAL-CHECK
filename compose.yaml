@@ -26,7 +26,7 @@ services:
       - no-new-privileges:true
 
   db:
-    image: pgvector/pgvector:0.8.7-pg18-trixie@sha256:9d9c930220cb9bf2f956d10a8f909cf9973d9672ca0278aef2c1e6facccad2e0
+    image: pgvector/pgvector:0.8.7-pg18-trixie@sha256:ab49524d18df7200b74ac9a475e1db6297fc1eb57da4c214c63d10ecc4b754fa
     environment:
       POSTGRES_USER: ${POSTGRES_USER:?defina no .env (copie o .env.example)}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina no .env (copie o .env.example)}
@@ -45,7 +45,7 @@ services:
       start_period: 10s
 
   storage:
-    image: mcr.microsoft.com/azure-storage/azurite:3.37.0@sha256:830430c1da1a2d537e08f3e6764dd1f5ae00cf0346bcaf625b968ec3f0971fd5
+    image: mcr.microsoft.com/azure-storage/azurite:3.38.0@sha256:c26024d62bf4a5b88a40968afd217234c00e1fc9a4790dc6105d1ca7979f6eec
     # Só o Blob Storage, sem a coleta de telemetria que o Azurite liga por padrão.
     command: ["azurite-blob", "--blobHost", "0.0.0.0", "--location", "/data", "--disableTelemetry"]
     ports:
