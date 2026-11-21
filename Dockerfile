@@ -1,8 +1,8 @@
 # Imagem do uv como estágio nomeado: assim o Dependabot, que só lê as linhas FROM, também a atualiza.
-FROM ghcr.io/astral-sh/uv:0.13.5@sha256:32a7bb39b496babbd997b0a39a4d66c126bdaf5661b302bf6f06abda8deca6ff AS uv
+FROM ghcr.io/astral-sh/uv:0.13.9@sha256:d3b601f0c7b118bc1753febf7c41cc80981df678445e0254284eecf84db79a7d AS uv
 
 # Estágio 1: instala as dependências e o projeto num ambiente virtual.
-FROM python:3.12-slim-trixie@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 AS builder
+FROM python:3.12-slim-trixie@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b AS builder
 
 COPY --from=uv /uv /bin/uv
 
@@ -26,7 +26,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked --no-dev --no-editable
 
 # Estágio 2: só o ambiente virtual, sem o uv nem o código-fonte, rodando sem root.
-FROM python:3.12-slim-trixie@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+FROM python:3.12-slim-trixie@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
 
 RUN groupadd --system --gid 999 app \
     && useradd --system --gid 999 --uid 999 --no-create-home --shell /usr/sbin/nologin app
